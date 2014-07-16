@@ -1,0 +1,266 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.75;
+  font-family: 'Open Sans', Helvetica, Arial sans-serif;
+  color: #3d3d41;
+  background-color: #fcfcfc;
+}
+
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+.btn {
+  font-weight: bold;
+}
+
+.btn-primary {
+  text-transform: uppercase;
+  border: 3px solid #e41d3d;
+  color: white;
+  background-color: #e41d3d;
+}
+.btn-primary:hover {
+  color: #e41d3d;
+  background-color: transparent;
+}
+
+.btn-large {
+  width: 100%;
+}
+
+.login {
+  background-color: #FFF;
+  border: 1px solid #b0b0b0;
+  height: auto;
+  width: 500px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.login-header {
+  width: 100%;
+}
+.login-header h1 {
+  text-align: center;
+  color: #3d3d41;
+  font-family: 'Lobster';
+  font-weight: 400;
+  margin: 0 0 80px 0;
+}
+.login-header p {
+  margin: 0;
+  text-align: center;
+}
+
+.login-logo {
+  font-size: 120px;
+  color: #e41d3d;
+}
+
+.login-form input {
+  display: inline-block;
+  margin-bottom: 10px;
+  height: 60px;
+}
+.login-form input:before {
+  content: "\e600";
+  color: red;
+}
+.login-form span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 30px;
+  height: 60px;
+  width: 60px;
+  background-color: red;
+}
+.login-form input[type=text], .login-form input[type=email] {
+  width: 100%;
+  padding-left: 56px;
+}
+
+.login-email, .login-username {
+  background-image: url("img/mail.png");
+  background-size: 32px 32dpx;
+  background-position: 12px 12px;
+  background-repeat: no-repeat;
+  border: 1px solid #3d3d41;
+}
+
+.login-username {
+  background-image: url("img/user.png");
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url('fonts/icomoon.eot');
+  src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('fonts/icomoon.woff') format('woff'), url('fonts/icomoon.ttf') format('truetype'), url('fonts/icomoon.svg') format('svg');
+}
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-mail:before {
+  content: "\e600";
+}
+
+.icon-feather:before {
+  content: "\e601";
+}
+
+.icon-user:before {
+  content: "\e602";
+}
+
+.icon-chat:before {
+  content: "\e603";
+}
+
+.icon-comment:before {
+  content: "\e604";
+}
+
+.icon-quote:before {
+  content: "\e605";
+}
+
+.icon-bubbles:before {
+  content: "\e606";
+}
+
+.icon-bubbles2:before {
+  content: "\e607";
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+  width: 100%;
+  background-color: white;
+  padding: 0 120px;
+  border-bottom: solid 1px #b0b0b0;
+  -moz-box-shadow: 0px 0px 5px #b0b0b0;
+  -webkit-box-shadow: 0px 0px 5px #b0b0b0;
+  box-shadow: 0px 0px 5px #b0b0b0;
+}
+.header header {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  padding: 10px 30px;
+  border-right: solid 1px #b0b0b0;
+}
+.header header h1 {
+  font-family: 'Lobster';
+  display: inline;
+}
+
+.header-logo {
+  color: #e41d3d;
+  font-size: 50px;
+  margin-right: 20px;
+}
+
+.header-credentials {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+.channels {
+  *zoom: 1;
+  float: left;
+  display: inline;
+  clear: none;
+  text-align: inherit;
+  padding-left: 0;
+  padding-right: 0;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+  border-right: solid 1px #3d3d41;
+}
+.channels:before, .channels:after {
+  content: '';
+  display: table;
+}
+.channels:after {
+  clear: both;
+}
+.channels:last-child {
+  margin-right: 0%;
+}
+
+.messages {
+  *zoom: 1;
+  float: left;
+  display: inline;
+  clear: none;
+  text-align: inherit;
+  padding-left: 0;
+  padding-right: 0;
+  width: 74.25%;
+  margin-left: 0%;
+  margin-right: 3%;
+  border-right: solid 1px #3d3d41;
+}
+.messages:before, .messages:after {
+  content: '';
+  display: table;
+}
+.messages:after {
+  clear: both;
+}
+.messages:last-child {
+  margin-right: 0%;
+}

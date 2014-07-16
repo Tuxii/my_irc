@@ -1,0 +1,47 @@
+@include font-face("icomoon", font-files("icomoon.woff", "icomoon.ttf", "icomoon.svg"), "icomoon.eot");
+
+
+.icon{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+.icon-mail:before {
+	content: "\e600";
+}
+.icon-feather:before {
+	content: "\e601";
+}
+.icon-user:before {
+	content: "\e602";
+}
+.icon-chat:before {
+	content: "\e603";
+}
+.icon-comment:before {
+	content: "\e604";
+}
+.icon-quote:before {
+	content: "\e605";
+}
+.icon-bubbles:before {
+	content: "\e606";
+}
+.icon-bubbles2:before {
+	content: "\e607";
+}
+
+[class^="icon-"], [class*=" icon-"]{
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

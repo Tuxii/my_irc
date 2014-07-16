@@ -1,0 +1,17 @@
+.btn{
+	font-weight: bold;
+}
+.btn-primary{
+	text-transform: uppercase;
+	border: 3px solid $primary;
+	color: $white;
+	background-color: $primary;
+	&:hover{
+		color: $primary;
+		background-color: transparent;
+	}
+}
+
+.btn-large{
+	width: 100%;
+}
