@@ -1,6 +1,6 @@
 // Setup basic express server
 var express = require('express');
-var app = express();
+var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var port = process.env.PORT || 3000;
@@ -10,7 +10,13 @@ http.listen(port, function () {
 });
 
 // Routing
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/public');
 app.use(express.static(__dirname + '/public'));
+
+app.get('/', function(request, response){
+  response.render('index.ejs');
+});
 
 // Chatroom
 

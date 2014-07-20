@@ -10,3 +10,9 @@ body{
 	color: $black;
 	background-color: $background;
 }
+
+.cb{
+  	content:"";
+  	display:table;
+  	clear:both;
+}

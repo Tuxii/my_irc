@@ -1,0 +1,48 @@
+.users{
+	padding: 20px 40px;
+	h2{
+		float: left;
+		width: 100px;
+		line-height: 1em;
+		font-size: 18px;
+		font-weight: normal;
+	}
+}
+
+.users-content{
+	margin-top: 30px;
+}
+
+.users-number{
+	float: left;
+	font-weight: 300;
+	color : $primary;
+	font-size: 40px;
+	margin-right: 10px;
+}
+
+.users-list{
+	padding: 0; margin: 0;
+	list-style: none;
+	list-style-position: inside;
+	display: table;
+}
+
+.users-item{
+	margin-bottom: 10px;
+}
+
+.users-avatar{
+	display: table-cell;
+	width: 30px;
+}
+
+.users-name{
+	vertical-align: middle;
+	display: table-cell;
+	padding-left: 10px;
+	width: 100%;
+	p{
+		margin: 0;
+	}
+}

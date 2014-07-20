@@ -1,10 +1,16 @@
+.content{
+	@include center(100%);
+}
+
 .channels{
-	@include col(1/4);
-	border-right: solid 1px $black;
+	@include col(1/4, $gutter:0);
 
 }
 .messages{
-	@include col(3/4);
-	border-right: solid 1px $black;
+	@include col(2/4,  $gutter:0);
 
+}
+
+.users{
+	@include col(1/4, $gutter:0);
 }

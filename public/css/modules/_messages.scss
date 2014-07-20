@@ -1,0 +1,70 @@
+.messages{
+	border-left: 1px solid darken($background, 30%) ;
+	border-right: 1px solid darken($background, 30%) ;
+	padding: 20px 0;
+}
+
+.messages-box{
+	position: relative;
+}
+
+.messages-list{
+	display: block;
+	list-style: none;
+	list-style-position: inside;
+	padding: 0 20px;
+	overflow: auto;
+	height: 660px;
+}
+
+.messages-item{
+	border-bottom: 1px solid darken($background, 10%);
+	margin-bottom: 20px;
+}
+
+.messages-avatar{
+	display: table-cell;
+	vertical-align: top;
+
+}
+
+.messages-author{
+	font-weight: bold;
+	margin-top: 0;
+}
+
+.messages-content{
+	display: table-cell;
+	padding-left: 30px;
+	width: 100%;
+}
+
+.messages-form{
+	position: fixed;
+	border-top: 1px solid darken($background, 30%);
+	padding-bottom: 0;
+	margin: 0 auto;
+	bottom: 0;
+	width: inherit;
+	left: 0;
+	right: 0;
+
+	#message{
+		width: 100%;
+		height: 100px;
+		padding: 10px 180px 15px 10px;
+		resize:none;
+		border:none;
+		overflow: hidden;
+	}
+	input[type=submit]{
+		position: absolute;
+		width: 150px;
+		height: 40px;
+		right: 10px;
+		top: 40px;
+	}
+}
+
+
+

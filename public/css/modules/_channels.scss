@@ -1,0 +1,38 @@
+.channels{
+	padding: 20px 80px;
+
+}
+.channels-header{
+	h2{
+		font-size: 40px;
+		color : $primary;
+		font-weight: 300;
+	}
+}
+
+.channels-list{
+	margin: 0; padding: 0;
+	list-style-position: inside;
+	list-style: square;
+}
+
+.channels-item{
+	margin: 15px 0;
+	width: 300px;
+	position: relative;
+	button{
+		text-transform: none;
+		position: absolute;
+		right: 0;
+		font-weight: normal;
+		&:before{
+			font-family: 'icomoon';
+			content: "\e687";
+			margin-right: 15px;
+		}
+	}
+	.active{
+		color: $primary;
+		font-weight: bold;
+	}
+}
