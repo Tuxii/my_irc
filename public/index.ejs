@@ -7,6 +7,9 @@
 </head>
 <body>
 
+    <div class="overlay">
+
+    </div>
     <div class="login">
         <header class="login-header">
             <p><span class="login-logo icon icon-chat"></span></p>
@@ -15,8 +18,8 @@
         <section >
             <p id="login-message" style="display:none" class="alert alert-danger"></p>
             <form action="#" id="login-form" class="login-form">
-                <input type="email" id="email" class="login-email" placeholder="E-mail">
-                <input id="nickname" class="login-username" type="text" placeholder="Pseudo">
+                <input type="email" id="email" class="login-email" autocomplete="off" placeholder="E-mail">
+                <input id="nickname" class="login-username" type="text" autocomplete="off" placeholder="Pseudo">
                 <input class="btn btn-primary btn-large" type="submit" value="Connexion">
             </form>
         </section>
@@ -114,31 +117,17 @@
             </header>
             <div class="cb"></div>
             <div class="users-content">
-                <ul class="users-list">
+                <ul class="users-list" id="users-list">
+                    {{#users}}
                     <li class="users-item">
                         <div class="users-avatar">
-                            <img src="http://lorempicsum.com/up/48/48/1" alt="">
+                            <img src="{{avatar}}" alt="">
                         </div>
                         <div class="users-name">
                             <p>{{nickname}}</p>
                         </div>
                     </li>
-                    <li class="users-item">
-                        <div class="users-avatar">
-                            <img src="http://lorempicsum.com/up/48/48/5" alt="">
-                        </div>
-                        <div class="users-name">
-                            <p>Maurice jambon</p>
-                        </div>
-                    </li>
-                    <li class="users-item">
-                        <div class="users-avatar">
-                            <img src="http://lorempicsum.com/up/48/48/7" alt="">
-                        </div>
-                        <div class="users-name">
-                            <p>Antoine Douillet</p>
-                        </div>
-                    </li>
+                    {{/users}}
                 </ul>
             </div>
         </div>

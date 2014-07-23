@@ -3,7 +3,8 @@ var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var md5 = require('md5');
-var port = process.env.PORT || 3000;
+var gravatar = require('gravatar')
+var port = process.env.PORT || 1337;
 
 http.listen(port, function () {
   console.log('Server listening at port %d', port);
@@ -20,7 +21,6 @@ var client
 var sockets = {}
 var users = {}
 var nbUsers = 0
-var nicknames = []
 
 io.on('connection', function(socket){
 
@@ -42,14 +42,13 @@ io.on('connection', function(socket){
 				// user is valid and can now log in
 				callback(false)
 				user.nickname = user.nickname
-				user.avatar = 'https://gravatar.com/avatar/' + md5(user.email) + '?s=50'
+				user.avatar = gravatar.url(user.email, {s:60})
+				// user.avatar = 'https://gravatar.com/avatar/' + md5(user.email) + '?s=50'
 				sockets[user.nickname] = socket
 				users[user.nickname] = user
 				++nbUsers
 				console.log(users)
-				nicknames.push(users[i].nickname)
-				console.log(nicknames)
-				io.emit('updateUsersList',nbUsers, nicknames);
+				io.emit('updateUsersList', nbUsers, users);
 			}
 		}
 	})
