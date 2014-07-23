@@ -13,8 +13,8 @@
             <h1>my_irc </h1>
         </header>
         <section >
-            <p id="login-message"></p>
-            <form action="#" class="login-form">
+            <p id="login-message" style="display:none" class="alert alert-danger"></p>
+            <form action="#" id="login-form" class="login-form">
                 <input type="email" id="email" class="login-email" placeholder="E-mail">
                 <input id="nickname" class="login-username" type="text" placeholder="Pseudo">
                 <input class="btn btn-primary btn-large" type="submit" value="Connexion">
@@ -82,7 +82,7 @@
                                 <img src="http://lorempicsum.com/up/60/60/2" alt="avatar">
                             </div>
                             <div class="messages-content">
-                                <p class="messages-author">Truite</p>
+                                <p> <span class="messages-author">Truite</span><span class="messages-date">12:04</span></p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum porro laudantium consequatur optio tempora et accusamus sit, pariatur libero dolorem aspernatur. Laborum deserunt nemo officiis corrupti ad ipsa animi architecto.</p>
                             </div>
                         </div>
@@ -110,7 +110,7 @@
         </div>
         <div class="users">
             <header>
-                <span class="users-number">67</span><h2> utilisateurs en ligne</h2>
+                <span id="users-number" class="users-number">{{lol}}</span><h2> utilisateurs en ligne</h2>
             </header>
             <div class="cb"></div>
             <div class="users-content">
@@ -120,7 +120,7 @@
                             <img src="http://lorempicsum.com/up/48/48/1" alt="">
                         </div>
                         <div class="users-name">
-                            <p>Jean</p>
+                            <p>{{nickname}}</p>
                         </div>
                     </li>
                     <li class="users-item">
@@ -145,7 +145,8 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/mustache.js"></script>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="/main.js"></script>
+    <script src="/client.js"></script>
 </body>
 </html>

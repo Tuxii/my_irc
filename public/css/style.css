@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,300,700);
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
 @import url(http://fonts.googleapis.com/css?family=Lobster);
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
@@ -451,6 +451,25 @@ body {
   width: 100%;
 }
 
+.alert {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+}
+
+.alert-danger {
+  padding: 0 10px;
+  background-color: #e41d3d;
+  color: white;
+}
+.alert-danger:before {
+  padding: 0 5px;
+  font-family: 'icomoon';
+  content: "\e607";
+}
+
 .login {
   background-color: #FFF;
   border: 1px solid #b0b0b0;
@@ -463,9 +482,18 @@ body {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
   position: absolute;
-  top: 200px;
-  left: 0;
-  right: 0;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 200;
 }
 
@@ -473,6 +501,7 @@ body {
   width: 100%;
 }
 .login-header h1 {
+  font-size: 40px;
   text-align: center;
   color: #3d3d41;
   font-family: 'Lobster';
@@ -561,7 +590,7 @@ body {
   content: "\e606";
 }
 
-.icon-bubbles2:before {
+.icon-warning:before {
   content: "\e607";
 }
 
@@ -770,6 +799,11 @@ body {
 .messages-author {
   font-weight: bold;
   margin-top: 0;
+}
+
+.messages-date {
+  float: right;
+  font-weight: bold;
 }
 
 .messages-content {
