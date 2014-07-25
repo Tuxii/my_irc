@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Socket.IO Chat Example</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="overlay">
+
+    </div>
+    <div class="login">
+        <header class="login-header">
+            <p><span class="login-logo icon icon-chat"></span></p>
+            <h1>my_irc </h1>
+        </header>
+        <section >
+            <p id="login-message" style="display:none" class="alert alert-danger"></p>
+            <form action="#" id="login-form" class="login-form">
+                <input type="text" id="email" class="login-email" autocomplete="off" placeholder="E-mail" autofocus>
+                <input id="nickname" class="login-username" type="text" autocomplete="off" placeholder="Pseudo">
+                <input class="btn btn-primary btn-large" type="submit" value="Connexion">
+            </form>
+        </section>
+    </div>
+    <div class="header">
+        <header>
+            <span class="header-logo icon icon-chat"></span>
+            <h1 class="header-title">my_irc</h1>
+        </header>
+        <div class="header-credentials">
+            <p>Bienvenue <strong>Username</strong> !</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="channels">
+            <header class="channels-header">
+                <h2>Salons</h2>
+            </header>
+            <ul class="channels-list">
+                <li class="channels-item">
+                    <span class="active">Général</span>
+                </li>
+                <li class="channels-item">
+                    <span>Jeux</span><button class="btn btn-primary btn-join">Rejoindre</button>
+                </li>
+                <li class="channels-item">
+                    <span>Sports</span><button class="btn btn-primary btn-join">Rejoindre</button>
+                </li>
+                <li class="channels-item">
+                    <span>Cinéma</span><button class="btn btn-primary btn-join">Rejoindre</button>
+                </li>
+                <li class="channels-item">
+                    <span>Musique</span><button class="btn btn-primary btn-join">Rejoindre</button>
+                </li>
+                <li class="channels-item">
+                    <span>Cuisine</span><button class="btn btn-primary btn-join">Rejoindre</button>
+                </li>
+                <li class="channels-item">
+                    <span>Poneys</span><button class="btn btn-primary btn-join">Rejoindre</button>
+                </li>
+            </ul>
+        </div>
+        <div class="messages">
+            <div class="messages-box">
+                <ul class="messages-list" id="messages-list">
+                    <li class="messages-item">
+                        <div class="messages-message">
+                            <div class="messages-avatar">
+                                <img src="http://lorempicsum.com/up/60/60/3" alt="avatar">
+                            </div>
+                            <div class="messages-content">
+                                <p class="messages-author">Momo</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum porro laudantium consequatur optio tempora et accusamus sit, pariatur libero dolorem aspernatur. Laborum deserunt nemo officiis corrupti ad ipsa animi architecto.</p>
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum porro laudantium consequatur optio tempora et accusamus sit, pariatur libero dolorem aspernatur. Laborum deserunt nemo officiis corrupti ad ipsa animi architecto.</p>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum porro laudantium consequatur optio tempora et accusamus sit, pariatur libero dolorem aspernatur. Laborum deserunt nemo officiis corrupti ad ipsa animi architecto.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="messages-item">
+                        <div class="messages-message">
+                            <div class="messages-avatar">
+                                <img src="http://lorempicsum.com/up/60/60/2" alt="avatar">
+                            </div>
+                            <div class="messages-content">
+                                <p> <span class="messages-author">Truite</span><span class="messages-date">12:04</span></p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum porro laudantium consequatur optio tempora et accusamus sit, pariatur libero dolorem aspernatur. Laborum deserunt nemo officiis corrupti ad ipsa animi architecto.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="messages-item">
+                        <div class="messages-message">
+                            <div class="messages-avatar">
+                                <img src="http://lorempicsum.com/up/60/60/1" alt="avatar">
+                            </div>
+                            <div class="messages-content">
+                                <p class="messages-author">Jean</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum porro laudantium consequatur optio tempora et accusamus sit, pariatur libero dolorem aspernatur. Laborum deserunt nemo officiis corrupti ad ipsa animi architecto.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cb"></div>
+            <div class="messages-form">
+                <form id="messages-form">
+                    <textarea id="message" placeholder="Entrez votre message"></textarea>
+                    <input type="submit"  class="btn btn-primary" value ="Envoyer">
+                </form>
+            </div>
+        </div>
+        <div class="users">
+            <header>
+                <span id="users-number" class="users-number">0</span><h2> utilisateurs en ligne</h2>
+            </header>
+            <div class="cb"></div>
+            <div class="users-content">
+                <ul class="users-list" id="users-list">
+                    <!-- {{#users}} -->
+                    <!-- <li class="users-item">
+                        <div class="users-avatar">
+                            <img src="{{avatar}}" alt="">
+                        </div>
+                        <div class="users-name">
+                            <p>{{nickname}}</p>
+                        </div>
+                    </li> -->
+                    <!-- {{/users}} -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/mustache.js"></script>
+    <script src="/client.js"></script>
+</body>
+</html>

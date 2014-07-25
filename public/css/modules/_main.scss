@@ -3,14 +3,14 @@
 }
 
 .channels{
-	@include col(1/4, $gutter:0);
+	@include span(1/4);
 
 }
 .messages{
-	@include col(2/4,  $gutter:0);
+	@include span(2/4);
 
 }
 
 .users{
-	@include col(1/4, $gutter:0);
+	@include span(1/4);
 }
