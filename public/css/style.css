@@ -476,7 +476,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #fcfcfc;
   z-index: 100;
   cursor: pointer;
 }
@@ -838,6 +838,20 @@ body {
   height: 40px;
   right: 10px;
   top: 40px;
+}
+
+.new-user {
+  font-style: italic;
+  padding-bottom: 10px;
+}
+
+.messages-writing {
+  font-style: italic;
+  font-size: 12px;
+}
+
+.messages-error {
+  color: #e41d3d;
 }
 
 .users {

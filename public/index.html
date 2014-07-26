@@ -30,7 +30,7 @@
             <h1 class="header-title">my_irc</h1>
         </header>
         <div class="header-credentials">
-            <p>Bienvenue <strong>Username</strong> !</p>
+            <p>Bienvenue <strong id="username">Username</strong> !</p>
         </div>
     </div>
 
@@ -39,8 +39,8 @@
             <header class="channels-header">
                 <h2>Salons</h2>
             </header>
-            <ul class="channels-list">
-                <li class="channels-item">
+            <ul id="channels-list" class="channels-list">
+                <!-- <li class="channels-item">
                     <span class="active">Général</span>
                 </li>
                 <li class="channels-item">
@@ -60,13 +60,13 @@
                 </li>
                 <li class="channels-item">
                     <span>Poneys</span><button class="btn btn-primary btn-join">Rejoindre</button>
-                </li>
+                </li> -->
             </ul>
         </div>
         <div class="messages">
             <div class="messages-box">
                 <ul class="messages-list" id="messages-list">
-                    <li class="messages-item">
+                   <!--  <li class="messages-item">
                         <div class="messages-message">
                             <div class="messages-avatar">
                                 <img src="http://lorempicsum.com/up/60/60/3" alt="avatar">
@@ -100,13 +100,14 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum porro laudantium consequatur optio tempora et accusamus sit, pariatur libero dolorem aspernatur. Laborum deserunt nemo officiis corrupti ad ipsa animi architecto.</p>
                             </div>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
+            <div class="messages-writing"></div>
             <div class="cb"></div>
             <div class="messages-form">
                 <form id="messages-form">
-                    <textarea id="message" placeholder="Entrez votre message"></textarea>
+                    <input autocomplete="off" id="message" placeholder="Entrez votre message">
                     <input type="submit"  class="btn btn-primary" value ="Envoyer">
                 </form>
             </div>
