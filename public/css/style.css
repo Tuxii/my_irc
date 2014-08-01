@@ -406,6 +406,7 @@ th {
 body {
   margin: 0;
   padding: 0;
+  min-height: 100%;
   font-size: 16px;
   line-height: 1.75;
   font-family: 'Open Sans', Helvetica, Arial sans-serif;
@@ -417,6 +418,10 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+
+html {
+  height: 100%;
 }
 
 /*  Syntax Quick Reference
@@ -750,14 +755,17 @@ body {
 
 .channels-item {
   margin: 15px 0;
-  width: 300px;
-  position: relative;
 }
 .channels-item button {
   text-transform: none;
-  position: absolute;
-  right: 0;
+  float: right;
   font-weight: normal;
+}
+@media screen and (max-width: 1400px) {
+  .channels-item button {
+    display: block;
+    float: none;
+  }
 }
 .channels-item button:before {
   font-family: 'icomoon';
@@ -772,7 +780,6 @@ body {
 .messages {
   border-left: 1px solid #b0b0b0;
   border-right: 1px solid #b0b0b0;
-  padding: 20px 0;
 }
 
 .messages-box {
@@ -784,8 +791,9 @@ body {
   list-style: none;
   list-style-position: inside;
   padding: 0 20px;
+  margin: 0;
   overflow: auto;
-  height: 660px;
+  height: 720px;
 }
 
 .messages-item {
@@ -817,6 +825,8 @@ body {
 .messages-form {
   position: fixed;
   border-top: 1px solid #b0b0b0;
+  border-left: 1px solid #b0b0b0;
+  border-right: 1px solid #b0b0b0;
   padding-bottom: 0;
   margin: 0 auto;
   bottom: 0;
@@ -845,7 +855,7 @@ body {
   padding-bottom: 10px;
 }
 
-.messages-writing {
+.messages-typing {
   font-style: italic;
   font-size: 12px;
 }

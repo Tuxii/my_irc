@@ -51,7 +51,7 @@ io.on('connection', function(socket){
 	socket.join('Général')
 	socket.on('login', function(user, callback){
 		if(user.nickname in sockets){
-			callback("Votre pseudo est déjà pris !")
+			callback("Ce pseudo est déjà pris !")
 		}
 		else
 		{
@@ -77,7 +77,6 @@ io.on('connection', function(socket){
 				sockets[user.nickname] = socket
 				me.currentChannel = 'Général'
 				users[user.email] = me
-				console.log(users)
 				++nbUsers
 				io.emit('updateUsersList', nbUsers, me);
 				socket.emit('welcome', me.nickname, me.currentChannel)

@@ -2,6 +2,7 @@ $( document ).ready(function(){
 
 	var socket = io()
 	var username
+	var typing = false
 
 	// connection
 	$('#login-form').submit(function(e){
@@ -103,6 +104,7 @@ $( document ).ready(function(){
 		})
 
 	})
+
 
 	//send message
 	$('#messages-form').submit(function(e){
